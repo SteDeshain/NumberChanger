@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    tools:context="com.stedeshain.numberchanger.MainActivity" >
+
+    <LinearLayout 
+        android:gravity="center"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button
+        	android:id="@+id/button_choosepic"
+	    	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+        	android:onClick="selectPictureFromAlbum"
+            android:text="选择图片" />
+        
+        <Button
+	    	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:onClick="savePicture"
+            android:text="保存图片" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:gravity = "center"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:orientation="horizontal">
+                
+        <Button
+	    	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:singleLine="true"
+        	android:onClick="addModifyMode"
+            android:text="←" />
+        
+        <TextView
+            android:id ="@+id/text_modify_varity"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:singleLine="true"
+            android:text="数字" />
+        
+        <Button
+	    	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:singleLine="true"
+        	android:onClick="subModifyMode"
+            android:text="→" />
+        
+        <Button
+	    	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:singleLine="true"
+        	android:onClick="decreaseInteger"
+            android:text="-" />
+                
+        <Button
+	    	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:singleLine="true"
+        	android:onClick="increaseInteger"
+            android:text="+" />
+        
+    </LinearLayout>
+            
+    <LinearLayout 
+        android:layout_gravity="center"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+        
+        <TextView
+            android:id="@+id/text_hint"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#ffa0a0a0"
+            android:text="没有图片" />
+        
+        <com.stedeshain.numberchanger.HintImageView
+            android:id="@+id/image_pic"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+		    android:adjustViewBounds="true"
+		    android:scaleType="fitXY" />
+        
+    </LinearLayout>
+
+</LinearLayout>
